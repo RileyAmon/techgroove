@@ -1,198 +1,62 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TechGroove</title>
-  <style>
-    :root {
-      --bg: #ffffff;
-      --text: #000000;
-      --cyan: #00ffff;
-      --red: #ff0033;
-    }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
-    body {
-      background: var(--bg);
-      color: var(--text);
-    }
-    header {
-      background-color: var(--cyan);
-      color: var(--text);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    .logo-container img {
-      width: 50px;
-      height: 50px;
-    }
-    .logo-text {
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: var(--red);
-    }
-    nav a {
-      margin-left: 1.5rem;
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 500;
-    }
-    .hero {
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 2.8rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-    .btn {
-      padding: 0.8rem 1.5rem;
-      background: var(--red);
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    section {
-      padding: 2rem;
-    }
-    .category, .blog-post, .contact-form {
-      margin-bottom: 2rem;
-    }
-    h2 {
-      color: var(--red);
-      margin-bottom: 1rem;
-    }
-    .product {
-      border: 1px solid #ccc;
-      padding: 1rem;
-      margin-bottom: 1rem;
-    }
-    .product a {
-      color: var(--cyan);
-      text-decoration: none;
-    }
-    footer {
-      background: var(--cyan);
-      padding: 1rem;
-      text-align: center;
-      margin-top: 4rem;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="logo-container">
-      <img src="logo.png" alt="TechGroove Logo">
-      <div class="logo-text">TechGroove</div>
-    </div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#categories">Categories</a>
-      <a href="#blog">Blog</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <div id="background" class="animated-bg"></div>
+  <header class="nav-bar">
+    <img src="techgroove_logo.png" alt="TechGroove Logo" class="logo"/>
+    <ul class="nav-links">
+      <li><a href="#products">Products</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </header>
 
-  <section class="hero">
-    <h1>Welcome to TechGroove</h1>
-    <p>Your #1 source for the latest gadgets, home tech & smart devices</p>
-    <button class="btn">Explore Now</button>
+  <section class="hero-section">
+    <h1>Welcome to <span>TechGroove</span></h1>
+    <p>Experience the future of technology, design and groove.</p>
+    <button class="cta">Explore Now</button>
   </section>
 
-  <section id="categories">
-    <h2>Top Categories</h2>
-    <div class="category">
-      <h3>Tech Gadgets</h3>
-      <div class="product">
-        <h4>Smart Watch</h4>
-        <p>Track fitness, calls, and more with this stylish smart watch.</p>
-        <a href="#">Buy on Amazon</a>
-      </div>
-      <div class="product">
-        <h4>Wireless Earbuds</h4>
-        <p>Experience immersive sound with top-tier wireless earbuds.</p>
-        <a href="#">Buy on Amazon</a>
-      </div>
-    </div>
-
-    <div class="category">
-      <h3>Home Appliances</h3>
-      <div class="product">
-        <h4>Air Fryer</h4>
-        <p>Healthy and crispy meals made fast and easy.</p>
-        <a href="#">Buy on Amazon</a>
-      </div>
-      <div class="product">
-        <h4>Robot Vacuum</h4>
-        <p>Let a smart vacuum clean your home automatically.</p>
-        <a href="#">Buy on Amazon</a>
-      </div>
-    </div>
-
-    <div class="category">
-      <h3>Smart Devices</h3>
-      <div class="product">
-        <h4>Smart Plug</h4>
-        <p>Control any device from your phone or smart assistant.</p>
-        <a href="#">Buy on Amazon</a>
-      </div>
-      <div class="product">
-        <h4>Video Doorbell</h4>
-        <p>Know who's at your door anytime, anywhere.</p>
-        <a href="#">Buy on Amazon</a>
-      </div>
+  <section class="products-section" id="products">
+    <h2>Featured Tech Products</h2>
+    <div class="product-grid">
+      <img src="images/tech1.jpg" class="bg-select" alt="Tech 1">
+      <img src="images/tech2.jpg" class="bg-select" alt="Tech 2">
+      <img src="images/tech3.jpg" class="bg-select" alt="Tech 3">
     </div>
   </section>
 
-  <section id="blog">
+  <section class="blog-section" id="blog">
     <h2>Latest from the Blog</h2>
-    <div class="blog-post">
-      <h4>Top 5 Must-Have Tech Gadgets in 2025</h4>
-      <p>Check out our roundup of the coolest new tech dropping this year!</p>
-      <a href="#">Read more</a>
-    </div>
-    <div class="blog-post">
-      <h4>Smart Home Setup for Beginners</h4>
-      <p>Everything you need to start automating your living space.</p>
-      <a href="#">Read more</a>
+    <div class="blog-posts">
+      <article>
+        <h3>Top 5 Tech Gadgets of 2025</h3>
+        <p>Explore the most anticipated tech innovations coming this year...</p>
+      </article>
+      <article>
+        <h3>How AI Is Changing Our Lives</h3>
+        <p>A quick look into how artificial intelligence is shaping industries...</p>
+      </article>
     </div>
   </section>
 
-  <section id="about">
-    <h2>About TechGroove</h2>
-    <p>At TechGroove, we’re passionate about connecting you to the best and smartest technology available. From hands-on reviews to curated affiliate picks, we help you make smarter buying decisions.</p>
-  </section>
-
-  <section id="contact">
+  <section class="contact-section" id="contact">
     <h2>Contact Us</h2>
-    <div class="contact-form">
-      <p>Email: support@techgroove.com</p>
-      <p>Instagram: @TechGrooveHQ</p>
-    </div>
+    <p style="text-align:center;">Drop us a message at contact@techgroove.com</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 TechGroove. All rights reserved.</p>
+    &copy; 2025 TechGroove. All rights reserved.
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
